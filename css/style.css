@@ -411,7 +411,7 @@ nav .menu-toggle {
 }
 
 .words.line1 {
-    top: 15%;
+    top: 20%;
     width: 20%;
     height: 7%;
 }
@@ -558,3 +558,42 @@ nav .menu-toggle {
     opacity: 1;
     transition: opacity 0.5s ease;
 }
+
+
+.letter {
+    position: relative;
+    background-color: #fff;
+    width: 90%; /* Kağıdın genişliğini ayarlıyoruz */
+    margin: 0 auto;
+    height: 80%; /* Kapalıyken daha kısa görünüm */
+    top: 20%; /* Kapalıyken yukarıda başlıyor */
+    border-radius: var(--env-border-radius);
+    box-shadow: 0 2px 26px rgba(0,0,0,.12);
+    transform: translateY(0px);
+    transition: all 0.5s ease; /* Geçiş süresi */
+    z-index: 1;
+    overflow: hidden; /* Taşmaları gizlemek için */
+}
+
+.open .letter {
+    width: 100%; /* Açıldığında tam genişlik */
+    height: 155%; /* Açıldığında daha uzun görünüm */
+    top: -35%; /* Kağıdı biraz daha dışarı çekiyoruz */
+}
+
+#message {
+    display: block; /* Mesaj her iki durumda da görünür */
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    line-height: 1.6;
+    opacity: 0; /* Başlangıçta görünmez */
+    transition: opacity 0.5s ease 0.5s; /* Zarf açıldığında görünmesi için gecikme ile */
+    padding: 20px;
+}
+
+.open #message {
+    opacity: 1; /* Zarf açıldığında mesaj görünür */
+}
+
