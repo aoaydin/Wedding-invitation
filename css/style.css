@@ -531,16 +531,20 @@ nav .menu-toggle {
 
 .envelope-text {
     position: absolute;
-    top: 40px; /* Zarfın üst kısmında konumlandırmak için ayarlanmıştır */
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 15px; /* Yazının konumunu istediğiniz yüksekliğe göre ayarlayın */
+    left: 45%;
+    transform: translateX(-50%); /* Ortalanması için */
     text-align: center;
     z-index: 4;
+    white-space: nowrap; /* Yazının tek satırda kalmasını sağlar */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Geniş alanlarda taşmayı engeller */
 }
+
 
 .envelope-text h1 {
     font-family: 'Great Vibes', cursive;
-    font-size: 24px;
+    font-size: 30px;
     color: #fff;
     text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
